@@ -1,0 +1,6 @@
+{
+  "name": "Agent 22: Funding Opportunity Monitoring Agent",
+  "description": "Autonomous multi-source research grant scraper, eligibility extractor, faculty publication matcher, and deadline-aware alert engine for DST, ANRF/SERB, MeitY, DRDO, ICMR, AICTE, and international agencies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
