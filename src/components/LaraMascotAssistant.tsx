@@ -35,13 +35,13 @@ export const BujiMascotAssistant: React.FC<BujiMascotAssistantProps> = ({
   const [messages, setMessages] = useState<AgentChatMessage[]>([
     {
       id: 'msg-1',
-      sender: 'buji',
-      text: `Hi, I'm Buji, your Funding Opportunity Monitoring Agent for Agentic AI Day 2026. I continuously track DST, ANRF/SERB, MeitY, DRDO, and ICMR calls.`,
+      sender: 'lara',
+      text: `Hi, I'm Lara, your Funding Opportunity Monitoring Agent for Agentic AI Day 2026. I continuously track DST, ANRF/SERB, MeitY, DRDO, and ICMR calls.`,
       timestamp: '10:30 AM',
     },
     {
       id: 'msg-2',
-      sender: 'buji',
+      sender: 'lara',
       text: `Nice to meet you, ${activeFaculty.name}! I've matched 2 high-priority research schemes for your lab: ANRF Core Research Grant (94% match) and DRDO Swarm Drones (91% match). What would you like to explore?`,
       timestamp: '10:31 AM',
       suggestedActions: [
@@ -94,8 +94,8 @@ export const BujiMascotAssistant: React.FC<BujiMascotAssistantProps> = ({
         setMessages(prev => [
           ...prev,
           {
-            id: `buji-${Date.now()}`,
-            sender: 'buji',
+            id: `lara-${Date.now()}`,
+            sender: 'lara',
             text: data.reply,
             timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
             suggestedActions: data.suggestedActions,
@@ -112,8 +112,8 @@ export const BujiMascotAssistant: React.FC<BujiMascotAssistantProps> = ({
         setMessages(prev => [
           ...prev,
           {
-            id: `buji-${Date.now()}`,
-            sender: 'buji',
+            id: `lara-${Date.now()}`,
+            sender: 'lara',
             text: `I've analyzed the portal index. For ${activeFaculty.name}, the ANRF CRG (deadline Oct 31, 2026) and MeitY C2S Phase II (deadline Oct 10, 2026) are top recommendations aligned with your research profile.`,
             timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
             suggestedActions: [
@@ -206,7 +206,7 @@ export const BujiMascotAssistant: React.FC<BujiMascotAssistantProps> = ({
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
               <h3 className="text-base font-bold text-slate-900 tracking-tight">
-                Buji AI Assistant
+                Lara AI Assistant
               </h3>
               <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 text-blue-800 uppercase tracking-wider">
                 Agent 22
@@ -236,7 +236,7 @@ export const BujiMascotAssistant: React.FC<BujiMascotAssistantProps> = ({
             key={m.id}
             className={`flex flex-col ${m.sender === 'user' ? 'items-end' : 'items-start'}`}
           >
-            {m.sender === 'buji' && (
+            {m.sender === 'lara' && (
               <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-1 px-1">
                 ASSISTANT
               </span>
@@ -283,7 +283,7 @@ export const BujiMascotAssistant: React.FC<BujiMascotAssistantProps> = ({
                 <span className="h-2 w-2 rounded-full bg-blue-600 animate-bounce [animation-delay:0.2s]"></span>
                 <span className="h-2 w-2 rounded-full bg-blue-600 animate-bounce [animation-delay:0.4s]"></span>
               </div>
-              <span className="text-[11px] text-slate-500 font-medium">Buji is analyzing portal records...</span>
+              <span className="text-[11px] text-slate-500 font-medium">Lara is analyzing portal records...</span>
             </div>
           </div>
         )}
@@ -300,16 +300,16 @@ export const BujiMascotAssistant: React.FC<BujiMascotAssistantProps> = ({
           className="flex items-center gap-2"
         >
           <input
-            id="buji-chat-input"
+            id="lara-chat-input"
             type="text"
             value={inputVal}
             onChange={(e) => setInputVal(e.target.value)}
-            placeholder="Ask Buji about schemes, DST, DRDO, eligibility, deadlines..."
+            placeholder="Ask Lara about schemes, DST, DRDO, eligibility, deadlines..."
             className="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2 text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all"
           />
 
           <button
-            id="buji-chat-submit-btn"
+            id="lara-chat-submit-btn"
             type="submit"
             disabled={!inputVal.trim() || isTyping}
             className="h-9 w-9 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-40 text-white flex items-center justify-center transition-colors shadow-sm cursor-pointer"
