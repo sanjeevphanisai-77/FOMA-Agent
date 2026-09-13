@@ -143,3 +143,90 @@ agent-22-funding-opportunity-monitoring-agent/
 │
 └── vite.config.ts
     └── Vite configuration
+
+# Application Workflow
+
+The application follows a workflow that starts with collecting funding opportunities and ends with providing relevant, deadline-aware recommendations to researchers.
+
+```text
+                    ┌─────────────────────────┐
+                    │     Funding Sources     │
+                    │                         │
+                    │ DST / ANRF / MeitY /    │
+                    │ DRDO / Other Sources    │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │ Opportunity Collection  │
+                    │                         │
+                    │ Collect funding details │
+                    │ such as title, agency,  │
+                    │ eligibility and deadline│
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │ Data Processing         │
+                    │                         │
+                    │ Clean and structure     │
+                    │ funding information     │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │     AI Analysis         │
+                    │                         │
+                    │ Gemini analyzes funding │
+                    │ requirements and        │
+                    │ research areas          │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │ Researcher Profile      │
+                    │                         │
+                    │ Research interests      │
+                    │ expertise and keywords  │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │ Opportunity Matching    │
+                    │                         │
+                    │ Compare researcher     │
+                    │ interests with funding  │
+                    │ requirements            │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │ Relevance Ranking       │
+                    │                         │
+                    │ Rank opportunities based│
+                    │ on relevance            │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │ Deadline Tracking       │
+                    │                         │
+                    │ Identify upcoming and   │
+                    │ approaching deadlines   │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │ Notifications / Alerts  │
+                    │                         │
+                    │ Notify researchers about│
+                    │ relevant opportunities  │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │       Researcher        │
+                    │                         │
+                    │ Review and apply for    │
+                    │ suitable opportunities  │
+                    └─────────────────────────┘
