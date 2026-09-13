@@ -5,7 +5,7 @@ import { DepartmentCalendarView } from './components/DepartmentCalendarView';
 import { PipelineTrackerView } from './components/PipelineTrackerView';
 import { SourcesScraperMonitor } from './components/SourcesScraperMonitor';
 import { TechStackView } from './components/TechStackView';
-import { BujiMascotAssistant } from './components/BujiMascotAssistant';
+import { BujiMascotAssistant } from './components/LaraMascotAssistant';
 import { GrantDetailModal } from './components/GrantDetailModal';
 import { NotificationScheduleModal } from './components/NotificationScheduleModal';
 import { 
