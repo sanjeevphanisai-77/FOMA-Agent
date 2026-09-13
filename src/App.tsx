@@ -5,7 +5,7 @@ import { DepartmentCalendarView } from './components/DepartmentCalendarView';
 import { PipelineTrackerView } from './components/PipelineTrackerView';
 import { SourcesScraperMonitor } from './components/SourcesScraperMonitor';
 import { TechStackView } from './components/TechStackView';
-import { BujiMascotAssistant } from './components/LaraMascotAssistant';
+import { LaraMascotAssistant } from './components/LaraMascotAssistant';
 import { GrantDetailModal } from './components/GrantDetailModal';
 import { NotificationScheduleModal } from './components/NotificationScheduleModal';
 import { 
@@ -306,7 +306,7 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8">
-        {/* Layout: Main View + Side Buji Mascot Panel on large screens */}
+        {/* Layout: Main View + Side Lara Mascot Panel on large screens */}
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
           {/* Main Primary View (8 cols or full width if chat is toggled) */}
           <div className={`${isChatOpen ? 'xl:col-span-8' : 'xl:col-span-12'} transition-all duration-300`}>
@@ -354,10 +354,10 @@ export default function App() {
             )}
           </div>
 
-          {/* Side Panel: Buji Mascot Assistant (Inspired by the photo's left chatbot interface!) */}
+          {/* Side Panel: Lara Mascot Assistant (Inspired by the photo's left chatbot interface!) */}
           {isChatOpen && (
             <div className="xl:col-span-4 sticky top-24">
-              <BujiMascotAssistant
+              <LaraMascotAssistant
                 activeFaculty={activeFaculty}
                 grantCalls={grantCalls}
                 onSelectGrant={(g) => setSelectedGrantForModal(g)}
@@ -373,18 +373,18 @@ export default function App() {
         </div>
       </main>
 
-      {/* Floating Buji Trigger when drawer is closed */}
+      {/* Floating Lara Trigger when drawer is closed */}
       {!isChatOpen && (
         <button
           onClick={() => setIsChatOpen(true)}
           className="fixed bottom-6 right-6 z-40 bg-blue-600 hover:bg-blue-700 text-white p-3.5 rounded-2xl shadow-xl shadow-blue-600/30 flex items-center gap-2.5 transition-all hover:scale-105 cursor-pointer"
-          title="Open Buji AI Copilot"
+          title="Open Lara AI Copilot"
         >
           <div className="relative">
             <Bot className="h-6 w-6" />
             <span className="absolute -top-1 -right-1 h-2.5 w-2.5 rounded-full bg-emerald-400 border-2 border-blue-600 animate-ping"></span>
           </div>
-          <span className="font-bold text-xs pr-1">Ask Buji Copilot</span>
+          <span className="font-bold text-xs pr-1">Ask Lara Copilot</span>
         </button>
       )}
 

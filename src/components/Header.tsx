@@ -119,7 +119,7 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
 
-        {/* Action Controls: Faculty Selector, Buji Assistant Button, Quick Stats */}
+        {/* Action Controls: Faculty Selector, Lara Assistant Button, Quick Stats */}
         <div className="flex items-center gap-2 sm:gap-3">
           {/* Active Faculty Selector (Simulates Agent 17 profile ingestion) */}
           <div className="flex items-center bg-slate-100 rounded-lg p-1 border border-slate-200 text-xs">
@@ -138,9 +138,9 @@ export const Header: React.FC<HeaderProps> = ({
             </select>
           </div>
 
-          {/* Buji Mascot AI Chat Toggle Button */}
+          {/* Lara Mascot AI Chat Toggle Button */}
           <button
-            id="toggle-buji-copilot-btn"
+            id="toggle-lara-copilot-btn"
             onClick={onToggleChatDrawer}
             className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all shadow-xs ${
               isChatOpen 
@@ -149,7 +149,7 @@ export const Header: React.FC<HeaderProps> = ({
             }`}
           >
             <Bot className="h-4 w-4" />
-            <span className="hidden sm:inline">Buji Copilot</span>
+            <span className="hidden sm:inline">Lara Copilot</span>
             <span className="h-2 w-2 rounded-full bg-emerald-300 animate-pulse"></span>
           </button>
         </div>

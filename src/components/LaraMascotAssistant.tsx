@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { AgentChatMessage, FacultyProfile, GrantCall } from '../types';
 
-interface BujiMascotAssistantProps {
+interface LaraMascotAssistantProps {
   activeFaculty: FacultyProfile;
   grantCalls: GrantCall[];
   onSelectGrant: (grant: GrantCall) => void;
@@ -24,7 +24,7 @@ interface BujiMascotAssistantProps {
   isDrawer?: boolean;
 }
 
-export const BujiMascotAssistant: React.FC<BujiMascotAssistantProps> = ({
+export const LaraMascotAssistant: React.FC<LaraMascotAssistantProps> = ({
   activeFaculty,
   grantCalls,
   onSelectGrant,
@@ -254,7 +254,7 @@ export const BujiMascotAssistant: React.FC<BujiMascotAssistantProps> = ({
               {m.timestamp}
             </span>
 
-            {/* Suggested action chips from Buji */}
+            {/* Suggested action chips from Lara */}
             {m.suggestedActions && m.suggestedActions.length > 0 && (
               <div className="flex flex-wrap gap-1.5 mt-2 max-w-[90%]">
                 {m.suggestedActions.map((act, i) => (

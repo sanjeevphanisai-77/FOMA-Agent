@@ -168,7 +168,7 @@ export interface SourceCrawlerStatus {
 
 export interface AgentChatMessage {
   id: string;
-  sender: 'buji' | 'user' | 'system';
+  sender: 'lara' | 'user' | 'system';
   text: string;
   timestamp: string;
   suggestedActions?: { label: string; action: string; payload?: any }[];
